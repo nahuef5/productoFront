@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row mt-5" *ngIf="prod">
+    <div class="col-md-4 mx-auto">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          Detalles
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group item"><b> Id: {{prod.id}}</b></li>
+          <li class="list-group item"><b> Nombre: {{prod.nombre}}</b></li>
+          <li class="list-group item"><b>Precio: ${{prod.precio}}</b></li>
+        </ul>
+        <div class="card-footer text-center">
+         <b> 
+        No me funciona este boton del orto y no me salta ningun error, despues comprobar que pasa xd
+        </b>
+        <button class="btn btn-outline-primary btn-block" 
+          (Click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+  </div>

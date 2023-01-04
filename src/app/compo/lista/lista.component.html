@@ -1,0 +1,28 @@
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Detalles</th>
+        <th scope="col">Modificar</th>
+        <th scope="col">Borrar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of productoLista">
+        
+        <td>{{prod.id}}</td>
+        <td>{{prod.nombre}}</td>
+        <td>{{prod.precio}}</td>
+        <td><button class="btn btn-outline-success" routerLink="detail/{{prod.id}}">
+            <i class="far fa-eye"></i> Ver</button></td>
+            <td><button class="btn btn-outline-warning" routerLink="update/{{prod.id}}">
+              <i class="far fa-edit"></i> Editar</button></td>
+      <td><button class="btn btn-outline-danger" (click)="borrar(prod.id)">
+            <i class="far fa-trash-alt"></i> Eliminar</button></td>
+
+      </tr>
+      
+    </tbody>
+  </table>

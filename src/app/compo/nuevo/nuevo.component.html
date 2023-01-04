@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row-mt-7">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" #form="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre"
+                    name="nombre"[(ngModel)]="nuevo.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="number" class="form-control" id="precio"
+                    name="precio"[(ngModel)]="nuevo.precio" required>
+                </div>
+
+                <button class="btn btn-outline-success btn-block"
+                [disabled]="!form.valid">Crear</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
